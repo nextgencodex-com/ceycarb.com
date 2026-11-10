@@ -1,36 +1,71 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# ==================================================
+# CEYCARB WEBSITE - NEXT.JS
+# ==================================================
+
+# Dependencies
 /node_modules
 /.pnp
-.pnp.js
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# testing
+# Testing
 /coverage
+/test-results/
+/playwright-report/
 
-# next.js
+# Next.js
 /.next/
 /out/
 
-# production
+# Production build
 /build
 
-# misc
-.DS_Store
-*.pem
+# Environment variables - IMPORTANT
+.env*
+!.env.example
 
-# debug
+# Deployment
+.vercel/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# local env files
-.env*.local
-.env
+# Operating system
+.DS_Store
+Thumbs.db
 
-# vercel
-.vercel
+# IDE / Editor
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+.turbo/
+
+# Certificates and keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local backups
+*.bak
+*.backup
